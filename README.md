@@ -1,5 +1,6 @@
-[alt text](https://s3-us-west-2.amazonaws.com/travelpiggy/icon.png)
 # Travel Piggy Back-End API
+
+<img src='https://s3-us-west-2.amazonaws.com/travelpiggy/icon.png' width='200px' height='200px'/>
 
 Back-end API for the Travel Piggy Web/Android/iOS front-end application.
 
@@ -14,7 +15,7 @@ Back-end API for the Travel Piggy Web/Android/iOS front-end application.
 - PostgreSQL
 
 ## Code Repository
-- GitHub [alt text](http://www.livefitbootcamps.com/wp-content/uploads/2014/05/simple-red-glossy-icon-arrows-hand-clear-pointer-left.png)(you are here)
+- GitHub <img src='http://www.livefitbootcamps.com/wp-content/uploads/2014/05/simple-red-glossy-icon-arrows-hand-clear-pointer-left.png' width='20px' height='20px' /> -you are here-
 
 ## Deployment
 - Heroku
@@ -22,7 +23,8 @@ Back-end API for the Travel Piggy Web/Android/iOS front-end application.
 
 ## Tools
 - Node.js
+- Express
 - Mocha
 - Expect
 - Cors
-- Superagent
+
