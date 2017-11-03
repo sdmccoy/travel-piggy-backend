@@ -1,0 +1,31 @@
+{
+  "name": "travelpiggy-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Travel Piggy Front-End",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdmccoy/travelpiggy-backend.git"
+  },
+  "author": "Scott McCoy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdmccoy/travelpiggy-backend/issues"
+  },
+  "homepage": "https://github.com/sdmccoy/travelpiggy-backend#readme",
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "expect": "^21.2.1",
+    "mocha": "^4.0.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
+}
