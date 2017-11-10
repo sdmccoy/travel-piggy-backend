@@ -6,10 +6,6 @@ const morgan = require('morgan');
 const express = require('express');
 const corsOrigins = process.env.CORS_ORIGINS;
 
-//configure PostgreSQL connection here
-
-
-
 const app = express();
 //set up morgan logging with the dev format
 app.use(morgan('dev'));
