@@ -1,9 +1,6 @@
 'use strict';
 
 const client = require('./connect-db.js');
-// console.log('newdb = ', newDB);
-// const client = newDB.connect();
-console.log('client = ', client);
 const {Router} = require('express');
 //load the db on server start
 function loadDB(){
@@ -23,7 +20,6 @@ const userRouter = module.exports = new Router();
 
 //create new user
 userRouter.post('/user', (req, res, next) => {
-  console.log('req.body = ', req.body);
 
   client.query(`
     INSERT INTO users(user_id, token, "email")
@@ -35,9 +31,8 @@ userRouter.post('/user', (req, res, next) => {
       req.body.email
     ]
   )
-    .then(result => {
+    .then(() => {
       res.send('new user inserted');
-      console.log('res = ', res.body);
     })
     .catch(next);
 }
