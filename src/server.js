@@ -4,6 +4,7 @@ require('dotenv').config();
 const cors = require('cors');
 const morgan = require('morgan');
 const express = require('express');
+const bodyParser = require('body-parser');
 const corsOrigins = process.env.CORS_ORIGINS;
 
 const app = express();
@@ -15,8 +16,9 @@ app.use(cors({
   credentials: true,
 }));
 
+app.use(bodyParser.json());
 //require in route files here with app.use
-
+app.use(require('./db/user-table.js'));
 //wildcard catch all if route doesnt exist
 app.all('/*', (req, res) => {
   res.sendStatus(404);
