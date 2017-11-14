@@ -19,6 +19,7 @@ app.use(cors({
 app.use(bodyParser.json());
 //require in route files here with app.use
 app.use(require('./db/user-table.js'));
+app.use(require('./db/year-budget-table.js'));
 //wildcard catch all if route doesnt exist
 app.all('/*', (req, res) => {
   res.sendStatus(404);

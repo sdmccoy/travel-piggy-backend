@@ -3,7 +3,7 @@
 const client = require('./connect-db.js');
 const {Router} = require('express');
 //load the db on server start
-function loadDB(){
+function createNewUserTable(){
 //create a table if table doesn't exist
   client.query(`
     CREATE TABLE IF NOT EXISTS users (
@@ -11,15 +11,15 @@ function loadDB(){
       token VARCHAR(255) NOT NULL,
       "email" VARCHAR(100) NOT NULL
     );`
-  ).then( data => console.log('data = ', data))
-    .catch( error => console.log('error = ', error));
+  ).then( () => console.log('user table created'))
+    .catch(error => console.log('error = ', error));
 }
-loadDB();
+createNewUserTable();
 
 const userRouter = module.exports = new Router();
 
 //create new user
-userRouter.post('/user', (req, res, next) => {
+userRouter.post('/new-user', (req, res, next) => {
 
   client.query(`
     INSERT INTO users(user_id, token, "email")
